@@ -6,7 +6,7 @@ int main()
 {
     int i;
     printf("First 10 even natural numbers: ");
-    for(i=2;i<21;i=i+2)
-        printf("%d ",i);
+    for(i=1;i<=10;i++)
+        printf("%d ",2*i);
     return 0;
 }

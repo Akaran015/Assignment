@@ -5,8 +5,8 @@
 int main()
 {
     int i;
-    printf("First 10 even natural numbers: ");
-    for(i=20;i>1;i=i-2)
-        printf("%d ",i);
+    printf("First 10 even natural numbers in reverse order: ");
+    for(i=10;i>=1;i--)
+        printf("%d ",2*i);
     return 0;
 }

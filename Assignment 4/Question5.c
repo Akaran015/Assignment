@@ -6,7 +6,7 @@ int main()
 {
     int i;
     printf("First 10 odd natural numbers in reverse order: ");
-    for(i=19;i>0;i=i-2)
-        printf("%d ",i);
+    for(i=10;i>0;i--)
+        printf("%d ",2*i-1);
     return 0;
 }
