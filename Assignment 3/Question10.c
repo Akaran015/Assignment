@@ -5,7 +5,7 @@
 
 int main()
 {
-    float cp,sp,profit,loss,per;
+    float cp,sp,profit=0,loss,per;
     printf("Enter Cost Price:");
     scanf("%d",&cp);
     printf("Enter Selling Price:");

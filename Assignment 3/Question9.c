@@ -4,20 +4,9 @@
 
 int main()
 {
-    int num1,num2,num3;
+    int a,b,c;
     printf("Enter Three Number:");
-    scanf("%d%d%d",&num1,&num2,&num3);
-
-    if(num1==num2 || num2==num3 || num1==num3 ||num1==num2==num3)
-        printf("%d Equal",num1);
-    else
-    {
-    if(num1>num2 && num1>num3)
-        printf("%d Greatest among three given numbers",num1);
-    if(num2>num1 && num2>num3)
-        printf("%d Greatest among three given numbers",num2);
-    if(num3>num2 && num3>num1)
-        printf("%d Greatest among three given numbers",num3);
-    }   
+    scanf("%d%d%d",&a,&b,&c);
+    printf("Greatest %d", a>b? a>c?a:c:b>c?b:c);
     return 0;
 }

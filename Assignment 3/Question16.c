@@ -4,15 +4,14 @@
 
 int main()
 {
-    char alph;
+    char c;
     printf("Enter the Alphabet:");
-    scanf("%c", &alph);
-    int x = alph;
-    if (x >= 65 && x <= 90)
+    scanf("%c", &c);
+    if (c >= 'A' && c <= 'Z')
         printf("Uppercase");
-    else if (x >= 97 && x <= 122)
+    else if (c >= 'a' && c <= 'z')
         printf("Lowercase");
-    else if (x >= 48 && x <= 57)
+    else if (c >= '0' && c <= '9')
          printf("Digit");
     else
         printf("Special Character");
