@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int Comb(int, int);
+int fact(int);
+int per(int, int);
 
 int main()
 {
@@ -12,23 +13,24 @@ int main()
     printf("Enter r selected at a time: ");
     scanf("%d", &r);
 
-    x = Comb(n, r);
+    x = per(n, r);
 
     printf("N items and r selected at a time %d \n", x);
     return 0;
 }
-int Comb(int n, int r)
+
+int fact(int x)
 {
-    int i, ans, n1 = 1, r1, c;
+    int i,f=1;
+    for (i = 1; i <= x; i++)
+        f*=i;
+        return f;
+}
 
-    for (i = 1; i <= n; i++)
-        n1 *= i;
-    c = n - r;
+int per(int n, int r)
+{
+    int ans;
 
-    for (i = 1; i <= c; i++)
-        r1 *= i;
-
-    ans = n1 * r1;
-
+    ans=fact(n)/fact(r);
     return ans;
 }
