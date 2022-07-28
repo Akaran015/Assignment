@@ -1,29 +1,33 @@
-#include<stdio.h>
+#include <stdio.h>
+
 int main()
 {
-  int year, remainder;
+    int year=2016;
 
-  printf("Enter Year: ");
-  scanf("%d", &year);
-
-  remainder = ((year % 4 == 0) && ((year % 400 == 0) || (year % 100 != 0)));
-
-  switch (remainder)
-  {
-
-  case 1:
-    printf("Leap Year");
-    break;
-
-  case 0:
-    printf("Not Leap Year");
-    break;
-
-  default:
-    printf("Invalid");
-    break;
-
-  }
-
-  return 0;
+    switch(year%100==0)
+    {
+        case 1:
+                switch (year%400==0)
+                {
+                case 1:
+                    printf("Leap Year");
+                    break;
+                case 0:
+                    printf("Non Leap Year");
+                    break;
+                }
+                break;
+        case 0:
+                switch (year%4==0)
+                {
+                case 1:
+                    printf("Leap Year");
+                    break;
+                case 0:
+                    printf("Non Leap Year");
+                    break;
+                }
+                break;
+    }
+    return 0;
 }
