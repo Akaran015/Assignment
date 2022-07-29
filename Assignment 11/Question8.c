@@ -1,29 +1,47 @@
 #include <stdio.h>
 void Pascal();
+int fact(int);
 int main()
 {
     Pascal();
     return 0;
 }
+int fact(int x)
+{
+    int i, f = 1;
+    for (i = 1; i <= x; i++)
+        f *= i;
+    return f;
+}
 
 void Pascal()
 {
 
-    int rows, coef = 1, space, i, j;
-    printf("Enter the number of rows: ");
-    scanf("%d", &rows);
-    for (i = 0; i < rows; i++)
+    int i, j, k, n = 0, r;
+    for (i = 0; i <= 4; i++)
     {
-        for (space = 1; space <= rows - i; space++)
-            printf("  ");
-        for (j = 0; j <= i; j++)
+        r = 0;
+        k = 4 - i;
+        for (j = 0; j <= 8; j++)
         {
-            if (j == 0 || i == 0)
-                coef = 1;
+            if (j >= 4 - i && j <= 4 + i)
+            {
+                if (k == j)
+                {
+                    int ans;
+                    ans = fact(n) / (fact(r) * fact(n - r));
+                    printf("%d", ans);
+                    r++;
+                    k = k + 2;
+                }
+                else
+                    printf(" ");
+            }
             else
-                coef = coef * (i - j + 1) / j;
-            printf("%4d", coef);
+                printf(" ");
+               
         }
         printf("\n");
+        n++;
     }
 }
