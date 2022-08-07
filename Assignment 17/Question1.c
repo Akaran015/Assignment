@@ -4,7 +4,6 @@
 
 int main()
 {
-    
     char str[20];
     int i,count=0;
     printf("Enter the String: ");
