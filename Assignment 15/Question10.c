@@ -4,38 +4,45 @@
 
 int main()
 {
-    int arr[20],i,size;
+    int x, i,greatest=0,temp=0,c=0;
 
-    printf("Enter the Size of Array: ");
-    scanf("%d", &size);
-    printf("Enter the %d number: ",size);
-    for (i = 0; i <size; i++)
-        scanf("%d", &arr[i]);
+    printf("Enter Array Limit Number: ");
+    scanf("%d", &x);
 
-    int length =size;
-    int fr[length];
-    int visited = -1;
+    int a[x];
 
-    for (int i = 0; i < length; i++)
+    printf("Enter %d Number: ",x);
+    for(i = 0; i < x; i++)
+        scanf("%d",&a[i]);
+    
+    greatest=a[0];
+
+    for(i=1;i<x;i++)
     {
-        int count = 1;
-        for (int j = i + 1; j < length; j++)
+        if(greatest<=a[i])
         {
-            if (arr[i] == arr[j])
-            {
-                count++;
-                fr[j] = visited;
-            }
-        }
-        if (fr[i] != visited)
-            fr[i] = count;
-    }
-    for (int i = 0; i < length; i++)
-    {
-        if (fr[i] != visited)
-        {
-            printf("    %d=> %d\n", arr[i], fr[i]);
+            greatest=a[i];
         }
     }
+    
+    int b[greatest+1];
+
+    for(i = 0; i < greatest+1; i++)
+        b[i]=0;
+
+    for(i = 0; i < x; i++)
+    {
+        c=a[i];
+        b[c]+=1;
+    }
+
+    for(i = 0; i < greatest+1; i++)
+    {
+        if(b[i]>0)
+        {
+            printf("%d => %d \n",i,b[i]);
+        }
+    }
+
     return 0;
 }
