@@ -4,8 +4,8 @@
 
 int main()
 {
-    int a[3][3], b[3][3];
-    int i, j, pro = 1;
+    int a[3][3], b[3][3], c[3][3];
+    int i, j, k, pro = 1;
     printf("Enter 9 Value inside 1st Matrix");
     for (i = 0; i < 3; i++)
     {
@@ -23,21 +23,20 @@ int main()
             scanf("%d", &b[i][j]);
         }
     }
-
     for (i = 0; i < 3; i++)
     {
         for (j = 0; j < 3; j++)
         {
-            pro *= a[i][j];
+                c[i][j] = a[i][0] * b[0][j] + a[i][1] * b[1][j] + a[i][2] * b[2][j];
         }
     }
     for (i = 0; i < 3; i++)
     {
         for (j = 0; j < 3; j++)
         {
-            pro *= b[i][j];
+            printf("%d ", c[i][j]);
         }
+        printf("\n");
     }
-    printf("The product of two matrices each of order 3x3 is %d", pro);
     return 0;
 }

@@ -19,11 +19,24 @@ int main()
 
     for (i = 0; i < 3; i++)
     {
+        sum=0;
         for (j = 0; j < 3; j++)
         {
             sum += a[i][j];
         }
+        printf("The sum of %d rows of a Matrix is %d\n", i,sum);
     }
-    printf("The sum of rows and columns of a Matrix is %d", sum);
+
+    printf("\n\n");
+    
+    for (i = 0; i < 3; i++)
+    {
+        sum=0;
+        for (j = 0; j < 3; j++)
+        {
+            sum += a[j][i];
+        }
+        printf("The sum of %d Column of a Matrix is %d\n", i,sum);
+    }
     return 0;
 }
