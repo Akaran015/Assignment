@@ -7,12 +7,11 @@ int main()
 {
     int i;
     int a[10] = {30, 10, 20,54,23,12};
-    int *p = &a[0];
 
-    sort(p, 6);
+    sort(&a[0], 6);
 
     for(i=0;i<6;i++)
-        printf("%d",a[i]);
+        printf("%d ",a[i]);
     return 0;
 }
 
