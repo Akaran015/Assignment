@@ -7,9 +7,7 @@ struct time
     int min;
     int hrs;
 };
-void diff_between_time(struct time t1,
-                       struct time t2,
-                       struct time *diff);
+void diff_between_time(struct time t1,struct time t2,struct time *diff);
 int main()
 {
     struct time start_time, stop_time, diff;
@@ -37,9 +35,7 @@ int main()
     return 0;
 }
 
-void diff_between_time(struct time start,
-                       struct time stop,
-                       struct time *diff)
+void diff_between_time(struct time start,struct time stop,struct time *diff)
 {
     while (stop.sec > start.sec)
     {
