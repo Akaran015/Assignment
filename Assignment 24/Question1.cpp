@@ -6,11 +6,12 @@ using namespace std;
 void prime(int a)
 {
     int flag=0;
-    for(int i=2;i<a;i++)
+    for(int i=2;i<=a/2;i++)
     {
         if(a%i==0)
         {
             flag=1;
+            break;
         }
     }
         if(flag==0)
